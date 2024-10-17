@@ -10,4 +10,4 @@ class PhotoAdmin(admin.ModelAdmin):
 
     @staticmethod
     def get_tagged_pets(pets):
-        return ", ".join([pet.name for pet in pets.tagged_pets.all()])
+        return ', '.join(str(pet) for pet in pets.tagged_pets.all())
